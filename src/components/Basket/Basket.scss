@@ -1,0 +1,10 @@
+.basket{
+  .basket__row{
+    display: flex;
+    p{
+      width: 25%;
+      margin: 0;
+      border: 1px solid #ccc;
+    }
+  }
+}

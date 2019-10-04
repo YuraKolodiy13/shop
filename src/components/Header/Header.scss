@@ -1,0 +1,40 @@
+.Header{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 50px;
+  h1{
+    margin: 0;
+    font-family: Neucha, Arial, sans-serif;
+    a{
+      text-decoration: none;
+      transition: .3s;
+      &:hover,
+      &.active{
+        color: brown;
+      }
+    }
+  }
+  ul{
+    display: flex;
+    justify-content: space-between;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    width: 60%;
+    li{
+      a{
+        color: #000;
+        text-decoration: none;
+        transition: .3s;
+        &:hover,
+        &.active{
+          color: brown;
+        }
+      }
+    }
+  }
+  & + .jumbotron{
+    margin-top: 50px;
+  }
+}

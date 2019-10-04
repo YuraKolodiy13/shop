@@ -1,0 +1,58 @@
+.PhoneList{
+  .phones__items{
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    display: flex;
+    margin: 0 -10px;
+    .phones__item{
+      margin-bottom: 40px;
+      width: 33%;
+      padding: 0 10px;
+      box-sizing: border-box;
+      position: relative;
+      &:hover{
+        .phones__img--wrap,
+        .phones__info{
+          box-shadow: 3px 7px 15px 2px rgba(0,0,0,.15);
+          .phones__title{
+            color: brown;
+          }
+        }
+      }
+      .phones__img--wrap{
+        border: 1px solid #ccc;
+        transition: .3s;
+        .phones__img {
+          height: 200px;
+          background-position: center;
+          background-size: contain;
+          background-repeat: no-repeat;
+        }
+      }
+      .phones__info{
+        border: 1px solid #ccc;
+        border-top: none;
+        padding: 20px;
+        transition: .3s;
+        background-color: #fff;
+        .phones__title{
+          font-size: 24px;
+          color: green;
+          transition: .3s;
+        }
+        .phones__price{
+          display: flex;
+          flex-direction: column;
+        }
+      }
+      .phones__link{
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        top: 0;
+        font-size: 0;
+      }
+    }
+  }
+}

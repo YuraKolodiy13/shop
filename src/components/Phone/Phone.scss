@@ -1,0 +1,25 @@
+.Phone{
+  .phone__img--wrap{
+    .phone__img{
+      height: 400px;
+      background-position: center;
+      background-size: contain;
+      background-repeat: no-repeat;
+    }
+  }
+  .characteristic{
+    .characteristic__row{
+      display: flex;
+      justify-content: space-between;
+      p{
+        width: 50%;
+        border: 1px solid #ccc;
+        margin: 0;
+        padding: 10px;
+        &:first-of-type{
+          text-transform: uppercase;
+        }
+      }
+    }
+  }
+}
