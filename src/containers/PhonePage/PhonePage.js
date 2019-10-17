@@ -1,7 +1,7 @@
 import React, {Component} from 'react'
 
 import {connect} from "react-redux";
-import {fetchPhoneById} from "../../actions";
+import {fetchPhoneById, phoneAddedToBasket} from "../../actions";
 import Phone from "../../components/Phone/Phone";
 import Loader from "../../components/Loader/Loader";
 
@@ -15,10 +15,10 @@ class PhonePage extends Component{
       return <Loader/>
     }
     return(
-      <div className='Phone'>
+      <div className='col-md-12'>
         {
           Object.keys(this.props.phone) ?
-            <Phone phone={this.props.phone}/>
+            <Phone phone={this.props.phone} phoneAddedToBasket={this.props.phoneAddedToBasket}/>
             : null
         }
       </div>
@@ -33,10 +33,9 @@ const mapStateToProps = state => {
   }
 };
 
-const MapDispatchToProps = dispatch => {
-  return{
-    fetchPhoneById: id => dispatch(fetchPhoneById(id))
-  }
+const MapDispatchToProps = {
+  fetchPhoneById: id => fetchPhoneById(id),
+  phoneAddedToBasket: id => phoneAddedToBasket(id)
 };
 
 export default connect(mapStateToProps, MapDispatchToProps)(PhonePage)

@@ -8,7 +8,7 @@
   overflow: hidden;
   background: #37474f;
   transition: background-color 0.3s ease-in, color 0.3s ease-in;
-  min-width: 150px;
+  //min-width: 150px;
   max-width: 250px;
   display: block;
   padding: 10px 20px;
@@ -38,4 +38,8 @@
     transform: rotate3d(0, 0, 1, 45deg);
     transition: transform 0.3s ease-in;
   }
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: Neucha, Arial, sans-serif;
 }

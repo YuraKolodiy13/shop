@@ -3,7 +3,7 @@ import Basket from "../../components/Basket/Basket";
 
 const BasketPage = () => {
   return(
-    <div>
+    <div className='col-md-12'>
       <Basket/>
     </div>
   )

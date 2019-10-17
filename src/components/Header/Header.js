@@ -1,8 +1,9 @@
 import React from 'react';
 import './Header.scss'
 import {NavLink} from  'react-router-dom'
+import {connect} from "react-redux";
 
-const Header = () =>{
+const Header = props =>{
 
   return (
     <div className='Header'>
@@ -11,11 +12,21 @@ const Header = () =>{
       </h1>
       <ul>
         <li>
-          <NavLink to='/basket'>Basket</NavLink>
+          <NavLink to='/basket'>
+            <i className="fas fa-shopping-basket"></i>
+            {props.basketItems.length ? <span>{props.basketItems.reduce((sum, item) => sum + item.count, 0)}</span> : null}
+          </NavLink>
         </li>
       </ul>
     </div>
   )
 };
 
-export default Header
+
+const mapStateToProps = state => {
+  return{
+    basketItems: state.phone.basketItems,
+  }
+}
+
+export default connect(mapStateToProps)(Header)

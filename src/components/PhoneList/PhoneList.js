@@ -17,7 +17,7 @@ const PhoneList = props => (
               <span>Price:</span>
               <span>${item.price}</span>
             </div>
-            <button className="btn" data-text="Add to basket" onClick={() => props.bookAddedToBasket(item.id)}>Add to basket</button>
+            <button className="btn" data-text="Add to basket" onClick={() => props.phoneAddedToBasket(item.id)}>Add to basket</button>
           </div>
           <NavLink className='phones__link' to={'/phone/' + item.id}>{item.name}</NavLink>
         </div>

@@ -1,10 +1,60 @@
 .basket{
   .basket__row{
     display: flex;
+    position: relative;
     p{
-      width: 25%;
+      width: 33.33%;
       margin: 0;
       border: 1px solid #ccc;
+      padding: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      &.actions{
+        justify-content: flex-start;
+        span{
+          margin: 0 10px;
+          cursor: pointer;
+          transition: .3s;
+          border: 1px solid brown;
+          padding: 2px 6px 0;
+          border-radius: 50%;
+          background-color: brown;
+          line-height: 17px;
+          &:hover{
+            background-color: brown;
+            color: #fff;
+          }
+        }
+      }
+      &.mainInfo{
+        span{
+          display: inline-block;
+          background-repeat: no-repeat;
+          background-size: contain;
+          width:40px;
+          height: 40px;
+        }
+      }
     }
+    .btn-remove{
+      position: absolute;
+      background-color: brown;
+      right: -7px;
+      top: 50%;
+      transform: translateY(-50%);
+      padding: 0 6px;
+      line-height: 17px;
+      border-radius: 50%;
+      cursor: pointer;
+      transition: .3s;
+      &:hover{
+        color: #fff;
+      }
+    }
+  }
+  .basket__total{
+    color: brown;
+    margin-top: 20px;
   }
 }

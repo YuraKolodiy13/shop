@@ -5,7 +5,6 @@
   margin-bottom: 50px;
   h1{
     margin: 0;
-    font-family: Neucha, Arial, sans-serif;
     a{
       text-decoration: none;
       transition: .3s;
@@ -21,15 +20,39 @@
     list-style: none;
     padding: 0;
     margin: 0;
-    width: 60%;
+    //width: 60%;
     li{
       a{
         color: #000;
         text-decoration: none;
         transition: .3s;
+        position: relative;
+        display: flex;
+        i{
+          font-size: 36px;
+        }
+        span{
+          position: absolute;
+          top: -5px;
+          right: 0;
+          background-color: brown;
+          color: #fff;
+          border-radius: 10px;
+          padding: 2px 5px 0;
+          font-size: 12px;
+          min-width: 20px;
+          display: flex;
+          justify-content: center;
+        }
         &:hover,
         &.active{
           color: brown;
+        }
+        &.active{
+          span{
+            background-color: #000;
+            color: brown;
+          }
         }
       }
     }
